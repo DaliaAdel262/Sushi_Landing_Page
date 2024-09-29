@@ -1,0 +1,590 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Flex", sans-serif;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/**************************************************************** NAV BAR ********************************************************************************************************/
+
+header{
+    background-color: rgb(30, 30, 30);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    
+}
+
+header nav{
+    width: 80%;
+    padding:20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav .logo h1{
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+}
+
+
+header nav .links1 ul,header nav .links2 ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+header nav .links1 ul li,header nav .links2 ul li{
+    margin: 0 20px;
+    position: relative;
+}
+
+
+header nav .links1 ul li .top,header nav .links2 ul li .top{
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    background-color: rgb(30, 30, 30);
+    bottom:10px;
+    z-index: 2;
+    transition:  0.5s all;
+}
+
+header nav .links1 ul li .bottom,header nav .links2 ul li .bottom{
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    background-color: rgb(30, 30, 30);
+    top:10px;
+    z-index: 2;
+    transition:  0.5s all;
+}
+
+header nav .links1 ul li a, header nav .links2 ul li a{
+    width:100%;
+    height: 100%;
+    position: relative;
+    color: white;
+    margin: 0 10px;
+    padding: 5px;
+    font-size: 20px;
+    z-index: 3;
+}
+
+.material-symbols-outlined{
+    font-size: 20px;
+}
+
+header nav .links2 ul li a{
+    border-radius: 20px;
+}
+
+header nav .links1 ul li .span,header nav .links2 ul li .span{
+    position: absolute;
+    top:-5px;
+    z-index: 1;
+    width: 100%;
+    height: 35px;
+    border-top: 5px rgb(105, 93, 15) solid;
+    border-bottom: 5px rgb(105, 93, 15) solid;;
+    border-radius: 20px;
+}
+
+
+header nav .links1 ul li:hover .top,header nav .links2 ul li:hover .top{
+    width: 0;
+    right: 0;
+}
+
+header nav .links1 ul li:hover .bottom,header nav .links2 ul li:hover .bottom{
+    width: 0;
+}
+
+
+/**************************************************************** HEADER ********************************************************************************************************/
+
+header .first{
+    width:100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+header .first .first_cont{
+    width:80%;
+    margin:10px;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+header .first .first_cont img{
+    width:50%;
+    height: 85%;
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+header .first .first_cont .text{
+    width:45%;
+    position: absolute;
+    top:30%;
+    right:0;
+}
+
+header .first .first_cont .text h2{
+    background: linear-gradient(45deg, rgba(105,93,15,1) 6%, rgba(207,187,58,1) 24%, rgba(105,93,15,1) 51%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 55px;
+    margin: 10px;
+}
+
+header .first .first_cont .text p{
+    font-size: 40px;
+    color: white;
+    margin: 10px;
+}
+
+header .first .first_cont .text button{
+    border: transparent;
+    border: 5px rgb(105, 93, 15) solid;
+    border-left: white;
+    border-right: white;
+    border-radius: 20px;
+    background-color: transparent;
+    color: white;
+    padding: 10px;
+    font-size: 30px;
+    margin: 10px;
+    transition: 0.5s all;
+}
+
+header .first .first_cont .text button:hover{
+    background-color: rgb(105, 93, 15);
+}
+
+/***************************************************************** POPULAR DISHES *******************************************************************************************************/
+.popular{
+    height: 80vh;
+    overflow: auto;
+    background: linear-gradient(45deg, rgba(105,93,15,1) 13%, rgba(207,187,58,1) 52%, rgba(105,93,15,1) 89%);
+    padding: 10px;
+}
+
+.popular .pop_cont{
+    width:90%;
+    height: 100%;
+    padding:10px;
+    margin:auto;
+    text-align: center;
+}
+
+.popular .pop_cont h2{
+    color:white;
+    font-size: 30px;
+    padding: 30px;
+    position: relative;
+    width: 20%;
+    margin: auto;
+}
+
+.popular .pop_cont h2::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    border: 5px white solid;
+    border-left: white;
+    border-right: white;
+    border-radius: 20px;
+    top:20px;
+    left:0;
+}
+
+
+.popular .pop_cont .items{
+    width: 90%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: start;
+    margin: 0  auto;
+    padding-top: 20px;
+}
+
+.popular .pop_cont .items .item_cont{
+    width: 25%;
+    padding:10px;
+}
+
+.popular .pop_cont .items .item{
+    position: relative;
+    padding:25px;
+    width:100%;
+    background: rgba(105, 93, 15,0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.popular .pop_cont .items .item .layer{
+    position: relative;
+    color: rgb(207,187,58);
+    width:100%;
+    
+}
+
+.popular .pop_cont .items .item .layer .left{
+    position: absolute;
+    left:-50px;
+    transition: 0.3s all;
+
+}
+
+.popular .pop_cont .items .item .layer .right{
+    position: absolute;
+    right:-50px;
+    transition: 0.3s all;
+}
+
+
+.popular .pop_cont .items .item:hover .layer .left{
+    transform: translateX(70px);
+}
+
+.popular .pop_cont .items .item:hover .layer .right{
+    transform: translateX(-70px);
+}
+
+.popular .pop_cont .items .item img{
+    width:75%;
+    height: 85%;
+}
+
+.popular .pop_cont .items .item .details{
+    width:70%;
+    margin: auto;
+}
+
+.popular .pop_cont .items .item .details p,.popular .pop_cont .items .item .details h3{
+    color: white;
+    font-size: 20px;
+}
+
+.popular .pop_cont .items .item button{
+    background-color: rgb(207,187,58);
+    border-radius: 20px;
+    border: transparent;
+    padding:10px;
+    color: white;
+    margin:10px;
+    font-size: 20px;
+}
+
+/********************************************************************* MENU ***************************************************************************************************/
+
+.menu{
+    position: relative;
+    background-image: url("../images/bg.webp");
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+}
+
+.menu .overlay{
+    position: absolute;
+    top:0;
+    right: 0;
+    width:100%;
+    height: 100%;
+    background-color: rgba(30, 30, 30,0.7);
+    z-index:1;
+}
+
+.menu .menu_cont{
+    position: relative;
+    height: 100%;
+    width:90%;
+    padding:10px;
+    margin: auto;
+    text-align: center;
+    z-index: 2;
+}
+
+.menu .menu_cont h2{
+    width: 10%;
+    color:white;
+    font-size: 30px;
+    margin:auto;
+    padding: 30px;
+    position: relative;
+}
+
+.menu .menu_cont h2::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    border: 5px white solid;
+    border-left: white;
+    border-right: white;
+    border-radius: 20px;
+    top:20%;
+    left:0;
+}
+
+
+.menu .menu_cont .sushi_type ul{
+    margin-top: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.menu .menu_cont .sushi_type ul li:nth-child(1){
+    background-color: rgb(30, 30, 30);
+}
+
+
+.menu .menu_cont .sushi_type ul li:nth-child(2):hover,
+.menu .menu_cont .sushi_type ul li:nth-child(3):hover,
+.menu .menu_cont .sushi_type ul li:nth-child(4):hover{
+    background-color: rgb(30, 30, 30);
+}
+
+.menu .menu_cont .sushi_type ul li{
+    padding: 20px;
+    transition: 0.2s all;
+}
+
+.menu .menu_cont .sushi_type ul li a{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu .menu_cont .dishes_cont{
+    width:100%;
+    margin: 0 auto;
+    padding:30px;
+    background-color: rgb(30, 30, 30);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: start;
+}
+
+.menu .menu_cont .dishes_cont .dish{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.menu .menu_cont .dishes_cont .dish_cont{
+    width:25%;
+    height: 100%;
+    padding:20px;
+}
+
+.menu .menu_cont .dishes_cont .dish .cart button{
+    position: absolute;
+    background-color: rgb(171, 155, 53);
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border: transparent;
+    left:-150px;
+    transition: 0.5s all;
+}
+
+.menu .menu_cont .dishes_cont .dish:hover .cart button{
+    transform: translateX(150px);
+}
+
+.menu .menu_cont .dishes_cont .dish .dish_name{
+    padding: 20px;
+    font-size: 20px;
+    width:70%;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    border-bottom: white solid 1px;
+}
+
+.menu .menu_cont .dishes_cont .dish .dish_desc{
+    padding: 20px;
+    font-size: 20px;
+    width: 70%;
+    margin: auto;
+}
+
+.menu .menu_cont .dishes_cont .dish .dish_name h3,
+.menu .menu_cont .dishes_cont .dish .dish_name p,
+.menu .menu_cont .dishes_cont .dish .dish_desc p{
+    color: white;
+}
+
+.menu .menu_cont .dishes_cont .dish img{
+    width:80%;
+    height: 70%;
+}
+
+/******************************************************************************* ORDER *****************************************************************************************/
+
+.order{
+    background-color: rgb(30, 30, 30);
+    overflow: auto;
+}
+
+.order .order_cont{
+    height: 90%;
+    margin:30px;
+}
+
+.order .order_cont h2{
+    width: 10%;
+    height: 10%;
+    font-size: 30px;
+    margin:auto;
+    padding: 20px;
+    position: relative;
+    color: rgb(105, 93, 15);
+    text-align: center;
+    
+}
+
+.order .order_cont h2::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    border: 5px rgb(105, 93, 15) solid;
+    border-left: white;
+    border-right: white;
+    border-radius: 20px;
+    top:20%;
+    left:0;
+}
+
+.order .order_cont .form_cont{
+    padding:20px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.order .order_cont .form_cont form{
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.order .order_cont .form_cont form .label{
+    width:40%;
+    height:80px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+
+.order .order_cont .form_cont form .label label{
+    width:40%;
+    margin:10px;
+    font-size: 15px;
+    color: white;
+}
+
+.order .order_cont .form_cont form .label input {
+    border: transparent;
+    background-color: transparent;
+    border-bottom: white solid 1px;
+    padding: 5px;
+    max-width: 500px; 
+    position: absolute;
+    bottom:70px;
+    color: white;
+}
+
+.order .order_cont .form_cont form .bigger{
+    width:80%;
+}
+
+.order .order_cont .form_cont form .bigger input{
+    width:350px; 
+}
+
+.order .order_cont .form_cont form button {
+    width: 70%;
+    background-color: rgb(105, 93, 15);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+/**************************************************************************** FOOTER ********************************************************************************************/
+footer{
+    background-color: rgb(30, 30, 30);
+    text-align: center;
+    overflow: auto;
+}
+
+footer .flink{
+    height: 80%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: 20px;
+    padding: 20px;
+}
+
+
+footer .flink .fcard h3{
+    color: rgb(105, 93, 15);
+    font-size: 25px;
+}
+
+footer .flink .fcard ul{
+    margin:20px;
+}
+
+footer .flink .fcard ul li{
+   margin: 10px;
+}
+
+footer .flink .fcard ul li a{
+    font-size: 15px;
+    color: white;
+}
+
+footer .flink .fcard ul li a:hover{
+    color:rgb(105, 93, 15);
+}
+
+footer .copyright{
+    padding: 20px;
+    font-size: 15px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    background-color: rgb(105, 93, 15);
+    color: white;
+}
